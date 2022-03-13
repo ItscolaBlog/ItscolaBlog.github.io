@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>index on White_cola Blog</title>
+    <link>https://itscola.github.io/tags/index/</link>
+    <description>Recent content in index on White_cola Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>我们都渴望的安静，促使我们不再安静。
+ Blog Powered by Hugo.</copyright><atom:link href="https://itscola.github.io/tags/index/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>公告栏</title>
+      <link>https://itscola.github.io/blog/</link>
+      <pubDate>Fri, 05 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://itscola.github.io/blog/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

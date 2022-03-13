@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>flex on White_cola Blog</title>
+    <link>https://itscola.github.io/tags/flex/</link>
+    <description>Recent content in flex on White_cola Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>我们都渴望的安静，促使我们不再安静。
+ Blog Powered by Hugo.</copyright>
+    <lastBuildDate>Thu, 28 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://itscola.github.io/tags/flex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>前端 Flex 布局 - 弹性布局 （一）- 对于简单元素排列及响应式</title>
+      <link>https://itscola.github.io/blog/frontside/flex-layout-01/</link>
+      <pubDate>Thu, 28 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://itscola.github.io/blog/frontside/flex-layout-01/</guid>
+      <description>一, Flex 布局的概念 Flex 为 flexible box 缩写，也就是 “弹性布局”。 依靠它可以实现一些响应式操作，比如我们要一个容器固定在中间，即使我们的窗口大小发生变化。
+同时也解决了元素的排列问题，让元素按行，按列排列。
+二, 使用 flex 布局 给外层容器的 CSS 加上 display: flex 即可开启容器的 flex 布局。
+三, display: flex - 默认 容器内元素会水平排列。 子元素默认按行排列。 这时候存在 水平的主轴 和 垂直交叉轴（竖轴）。 元素会排列在水平的主轴左边，垂直交叉轴上边。
+这时候当我们改变窗口大小，flex 布局内的元素也会随之改变，就这样实现了响应式。 之后我们加上其它属性，同样会有响应式。 下面我们来看常见属性的常见项。
+四, justify-content 属性 - 主轴上的对齐方式 使用 justify-content 属性，我们可以定义 flex 布局内，元素的主轴上的对齐方式。 比如: justify-content: flex-start; 对其方式分别有 flex-start , flex-end , center , space-between , space-around 分别对应了 ： 左对齐，右对齐，居中，两端对齐 平分空间，两侧间隔相等对齐 中间间隔大一倍
+1. justify-content: center; 居中对齐 响应式同样存在，后面的属性也不多说了。 2.</description>
+    </item>
+    
+  </channel>
+</rss>

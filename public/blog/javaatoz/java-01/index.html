@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Java and C# developer.">
+    <meta name="Author" content="White_cola">
+    <meta name="keywords" content="白可乐的博客,White_cola Blog,white_cola,white_cola mcbbs,White_Cola,白可乐">
+    <link rel="stylesheet" href=https://itscola.github.io/css/syntax.css>
+    <link rel="stylesheet" href=https://itscola.github.io/css/style.css>
+    <script src="https://kit.fontawesome.com/1b7478c139.js" crossorigin="anonymous"></script>
+    <title>《这就是 Java》第一章 01- 变量</title>
+  </head><body><aside id="sidenav">
+    <header>
+    
+        <a href=https://itscola.github.io/><img src="https://itscola.github.io/avatar.png" alt="avatar"></a>
+        
+    
+
+    <a id="branding" href=https://itscola.github.io/>
+        
+            White_cola Blog
+        
+    </a>
+    </header>
+
+    <nav>
+        
+            		
+            <a href="/"
+                
+            >
+                <i class="fas fa-home fa-sm"></i>
+                <span>主页</span>
+            </a>
+        
+            		
+            <a href="/blog/"
+                
+            >
+                <i class="blog"></i>
+                <span>全部文章</span>
+            </a>
+        
+            		
+            <a href="/tags"
+                
+            >
+                <i class="tags"></i>
+                <span>标签</span>
+            </a>
+        
+            		
+            <a href="https://github.com/itscola"
+                
+                    target="_blank"
+                
+            >
+                <i class="fab fa-github fa-ms"></i>
+                <span>github</span>
+            </a>
+        
+            		
+            <a href="/tags/java/"
+                
+            >
+                <i class="java"></i>
+                <span>java</span>
+            </a>
+        
+            		
+            <a href="/index.xml"
+                
+            >
+                <i class="fas fa-rss fa-ms"></i>
+                <span>RSS</span>
+            </a>
+        
+            		
+            <a href="/tags/computersystemframework/"
+                
+            >
+                <i class="ComputerSystemFramework"></i>
+                <span>计算机系统结构</span>
+            </a>
+        
+    </nav>
+</aside>
+<main id="main">
+            <a href="javascript:void(0)" id="closebtn" onclick="navToggle()"><i class="fas fa-bars fa-lg"></i></a>
+            <div class="content">
+
+    
+	
+    <h1 id="title">《这就是 Java》第一章 01- 变量</h1>
+    
+      
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一-这就是变量">一. 这就是变量</a>
+      <ul>
+        <li><a href="#1-如何理解变量">1. 如何理解变量</a></li>
+        <li><a href="#2-变量的概念">2. 变量的概念</a></li>
+      </ul>
+    </li>
+    <li><a href="#二-变量与-java">二. 变量与 Java</a>
+      <ul>
+        <li><a href="#1-变量与编程语言">1. 变量与编程语言</a></li>
+        <li><a href="#2-变量在-java-中的表示">2. 变量在 Java 中的表示</a></li>
+        <li><a href="#3-变量在-java-中的操作">3. 变量在 Java 中的操作</a></li>
+      </ul>
+    </li>
+    <li><a href="#三-这就是-java-中的一个概念">三. 这就是 Java 中的一个概念</a>
+      <ul>
+        <li><a href="#理解必须完成">理解【必须完成】</a></li>
+      </ul>
+    </li>
+    <li><a href="#小建议">小建议</a></li>
+  </ul>
+</nav>
+    <hr>
+<h1 id="java-变量---这就是-java-01">Java 变量 - 这就是 Java 01</h1>
+<p>(谁知道将来我会不会写书呢 努力吧) <br>
+注意，这不是简单点总结概念，那样毫无意义，看起来就像文档，读者也看着不舒服。而是一个从 0 开始的教学系列。  <strong>教程和文档不是一个概念</strong>。</p>
+<p>本教程将采用 <strong>非必要，不引入新知识原则</strong>。 不会有对新人不友好的术语，也不会时不时引入一个之前没讲过的知识。 <strong>力求让 0 基础的读者也能轻松学会</strong>。</p>
+<h2 id="一-这就是变量">一. 这就是变量</h2>
+<h3 id="1-如何理解变量">1. 如何理解变量</h3>
+<p>想象两个快递盒子，分别装着你买的键盘和鼠标。如果有人问你这两个分别是什么？ 你可以回答 “这个是鼠标，这个是键盘” 。</p>
+<p>这时，我们把 装有鼠标的盒子 和 装有键盘的盒子，分别看作一个整体。 如果我们把这两个盒子里的物品互换，鼠标装入原有键盘的盒子，键盘装入原有鼠标的盒子。 那这时，我可以指着原本被指代鼠标的盒子说 “现在这是键盘了”。</p>
+<p>是盒子变了吗？并不是，是盒子里的物品变了。</p>
+<p>我们可以把 <u>快递盒子看作变量</u>，而 <u>变量表示的值看作快递盒子里装的物品</u>。</p>
+<p>比如 ： 变量 box 的值为 10 ，可以想象成 一个被称为 box 的盒子，它里面装的物品为 “10”。 那我们只要一看到 box 就可以将它可以指代为 “10”了。</p>
+<p>那如果我把 box 的值变为了 11，那是不是就类似于 我把盒子 “box” 里面的物品换成 “11”了？ 是的，变量就那么简单。</p>
+<h3 id="2-变量的概念">2. 变量的概念</h3>
+<p>那么，变量是用一个 “盒子”来表示“盒子所装的物品”。并且，“盒子”所表示的里面的“物品”是可以变成其它“物品”的。</p>
+<p>我们把“盒子”的名字，称为 <strong>变量名</strong>。  <br>
+我们把“盒子”所代表的“物品”，称为 <strong>变量值</strong>。</p>
+<p>那么可以说：<strong>变量是用一个变量名，来指代可能会发生改变的变量值。</strong></p>
+<blockquote>
+<p>学习是用旧的概念来理解新的概念的过程，我希望你看完这篇文章，也能用自己的话总结出什么是变量。</p>
+</blockquote>
+<h2 id="二-变量与-java">二. 变量与 Java</h2>
+<h3 id="1-变量与编程语言">1. 变量与编程语言</h3>
+<p>目前为止，绝大部分的编程语言，都有变量这一概念，并且含义都类似。 理解了变量的概念在其它编程语言也通常适用。</p>
+<p>虽然变量是基础中的基础，但离开了变量，这些编程语言就失去了灵魂。（也许以后会出现更先进的方式，但目前是这样。）</p>
+<h3 id="2-变量在-java-中的表示">2. 变量在 Java 中的表示</h3>
+<p>int a = 12;<br>
+我们先看 “int”的后面部分，   <br>
+这里的 “=” 并不是数学上含义的等号，而是表示 “赋值” 。 这就像你把 12 这个物品，装进 a 这个盒子中，然后我们会用盒子 a 来指代 物品 12。</p>
+<p>也就是 “把变量值 12 赋予给名为 a 的变量，让变量 a 来表示 变量值 12。”    <br>
+那么 a 变量就指代了它的值 12。</p>
+<p>再来看前面的 “int” 它表示了变量 a 可以被赋予值的类型。    <br>
+就好像不同的盒子能装的物品类型不一样，你不可能将放鼠标的快递盒子装一头大象，也不能将放鼠标的盒子装一个蛋糕。</p>
+<p>int 表示整数类型，表示 a 这个变量只能 = 为整数型。 int 为 “Integer” 这个 单词的缩写，也就是整数。（后门还会讲 long 类型）</p>
+<p>11 是整数 没问题。     int a = 11;   <br>
+100 是整数 没问题。 int a = 100;   <br>
+1001是整数 没问题。 int a = 1001;</p>
+<p>“apple” 不是整数，它是“一行字” 不行 不能有 int a = “apple”</p>
+<h3 id="3-变量在-java-中的操作">3. 变量在 Java 中的操作</h3>
+<p>代码是从上往下一行一行走的，第一个小任务，猜测下方四行代码的作用，就当热身吧。 也不用追求完美，热热身就好。</p>
+<pre><code>int a = 10;
+int b = 11;
+a = 12;
+b = a;
+</code></pre><p>这就是这节课你的学习目标，看懂这四行代码。不需要你打开电脑跟着操作，我会在每章最后一节准备一个实战篇，非必要情况下，实战篇之前，你就理解概念就好。</p>
+<blockquote>
+<p>新手都特别喜欢学点内容和其它人炫耀？ 也理解你们，你可以仿照这四行代码写出一些操作，那也算你自己写的了。   但要知道，这是第一两节课程，所以内容是基础中的基础，向别人炫耀失败也很正常。  或是暗中努力让别人惊叹吧。</p>
+</blockquote>
+<p>先看第一行代码     int a = 10;
+将 10 赋值给 int 型（整数型）变量 a。</p>
+<p>第二行代码    int b = 11;   <br>
+将 11 赋值给 int 型（整数型）变量 b。</p>
+<p>第三行代码    a = 12; <br>
+将 12 赋值给 int 型（整数型）变量 a。 <br>
+这时候 变量 a 表示的就不是 10 了，而被换成了12。  就好像把盒子里的键盘还成了鼠标。</p>
+<p>这里为什么没有 int ？ 因为我们在第一行已经声明 a 为 int 类型了。 变量的声明一次就好了。    <br>
+我们还可以先声明再赋值，但不能先赋值再声明。 第一行注意声明同时赋值。</p>
+<pre><code>// 先声明再赋值；
+int a;
+a = 10;
+
+// 声明同时赋值
+int a = 10;
+</code></pre><p>再来看最后一行代码 b = a;    <br>
+<del>意思是 b 和 a 相等吗？ 并不是！</del>  我们已经说过 ，编程中一个 = 代表赋值 ，不是代表等于。</p>
+<p>它的意思是将变量 a 赋值给 b。 也就是把变量 a 代表的值 12 赋字给变量 b， 这样 b 代表的值就从原来的值 11 变为 12 了。</p>
+<p>和比喻成盒子不一样的是，a 盒子里的物品 12 放到 盒子 b 里。此时 b盒子里的物品也是 12，但是 a 盒子里的物品还是 12，没有消失。 这就是 = 在赋 整数值时候的特性，这里的赋值就像复制了 a 盒子里的物品，然后放到 b 盒子里，然后 b 盒子里的物品就被覆盖了，变成了 a 的物品 12。因为 java 中，变量只能表示一个值，不能表示多个。 不能一个盒子里有两个物品。</p>
+<p>所以这些代码最后走下来，变量 a 和变量 b 都代表值 12。</p>
+<h2 id="三-这就是-java-中的一个概念">三. 这就是 Java 中的一个概念</h2>
+<p>变量：<strong>变量是用一个变量名，来指代可能会发生改变的变量值。</strong></p>
+<p>变量名：<strong>变量的名字</strong>。</p>
+<p>变量值：<strong>变量所代表的值</strong>。</p>
+<p>= ： <strong>赋值，将后面的值赋给前面的变量</strong>。</p>
+<p>代码格式： <strong>类型 变量名 = 变量名或值;</strong>   <br>
+如   int a = b;   int a = 10;</p>
+<h3 id="理解必须完成">理解【必须完成】</h3>
+<p>用自己的话，回答下面每个问题，必须用自己的话，不要参考。最好写下来（也可以打字）：</p>
+<ol>
+<li>什么是变量？</li>
+<li>什么是变量名？</li>
+<li>什么是变量值？</li>
+<li>什么是赋值？</li>
+<li>Java 中怎么声明与赋值变量？</li>
+<li>变量必须先声明再赋值吗？</li>
+<li>只有 Java 才有变量名？</li>
+</ol>
+<blockquote>
+<p>学习是用旧的概念来理解新的概念的过程，</p>
+</blockquote>
+<h2 id="小建议">小建议</h2>
+<p>背单词有个技巧，每天不背不如少背。</p>
+<p>如果你一天要记住 40 个 单词，然后每天复习 100 个，先不说能不能记牢，你可能坚持不过两个星期。然后很长一段时间再接着背，这样循环。 “abandon” “abandon” 上次记的单词，还能记得多少个？</p>
+<p>如果你一天要记住 10 个 单词，心情好可以多背点，但至少10个，然后每天复习 25个。你很轻松就能坚持下来，并且持之以恒。</p>
+<p>每天均匀的努力，比短时间爆发性的努力要重要。</p>
+<blockquote>
+<p>只要你确保每天均衡的学习那就非常好了。</p>
+</blockquote>
+<blockquote>
+<p><del>跑得快不一定赢，不一定&hellip;&hellip;</del> （233333）</p>
+</blockquote>
+
+    
+	
+	
+	
+    <div class="nav-next-prev">
+        <div class="nav-prev">
+            
+                <a href="https://itscola.github.io/blog/ijava/java-mutiple-threads-i/"><i class="fas fa-chevron-left"></i></a>
+            
+        </div>
+        <a class="nav-top" href="#">top</i></a>
+        <div class="nav-next">
+            
+                <a href="https://itscola.github.io/blog/ijava/java-servlet-01/"><i class="fas fa-chevron-right"></i></a>
+            
+        </div>
+    </div>
+    
+
+            </div><footer>
+<div class="footer-content">
+
+  <div class="contact-info">
+      
+      
+  </div>
+
+
+<p class="copyright meta">我们都渴望的安静，促使我们不再安静。
+ Blog Powered by Hugo.</p>
+
+</div>
+</footer></main>
+    </body>
+    <script src=https://itscola.github.io/js/navbutton.js></script>
+</html>

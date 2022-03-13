@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>UI on White_cola Blog</title>
+    <link>https://itscola.github.io/tags/ui/</link>
+    <description>Recent content in UI on White_cola Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>我们都渴望的安静，促使我们不再安静。
+ Blog Powered by Hugo.</copyright>
+    <lastBuildDate>Fri, 13 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://itscola.github.io/tags/ui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java GUI 开发 - 简单基本组件，事件处理，事件分类，事件适配器 (二)</title>
+      <link>https://itscola.github.io/blog/javaui/java-ui-develope-2/</link>
+      <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://itscola.github.io/blog/javaui/java-ui-develope-2/</guid>
+      <description>Java UI开发 - 2 此教程紧接着第一篇内容来 第一篇： https://www.whitecola.top/blog/javaui/java-ui-develope-1/
+上一篇我们讲了 容器 顶级容器 内容窗格 面板 以及 布局，这次我们来讲讲基本的组件，按钮，文本框等等。
+点击按钮是要有反应的，这个反应就是我们要讲的 “事件” 来控制。也在本篇文章中这是重点。
+Java 自带的 awt，swing 组件太丑？ 推荐给你这个： https://github.com/atarw/material-ui-swing 但是没有基础也会用起来很吃力，等看完文章再上手吧。
+当然，还会有第三篇文章 swing 组件， 和第四篇 绘图，第五篇第六盘 JavaFX。 实际上，如果你想实现基本掌握 UI 开发，那看上一篇和这一篇就差不多够了，后面的可以说是扩展。
+很多地方都是通的。比如你理解了 JLabel ， JButton，换一个库，也能快速上手。
+一，简单基本组件 1. JLabel 标签 当我们要在 UI 中显示文字 图标，又或是图标和文字时，我们就要用到 JLabel 标签。它是不可编辑的，也就是说它仅仅是显示信息给使用者。
+我们来看如何创建，也就是来看它的构造方法。
+ JLabel() - 创建一个空的标签 JLabel(Icon image) - 创建一个图标标签 JLabel(String text) - 创建一个文本标签 JLabel(Icon image,int horizontalAlignment) - 创建一个图标标签，并指定水平对齐方式 JLabel(String text,int horizontalAlignment) - 创建一个文本标签，并指定水平对齐方式 JLabel(String text,Icon image,int horizontalAlignment) - 创建一个图标标签，并指定水平对齐方式  其中对其参数可以为 JLabel.</description>
+    </item>
+    
+    <item>
+      <title>Java GUI 开发 - 容器,内容窗格,面板,布局管理器 (一)</title>
+      <link>https://itscola.github.io/blog/javaui/java-ui-develope-1/</link>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://itscola.github.io/blog/javaui/java-ui-develope-1/</guid>
+      <description>Java UI开发 - 1 Java 的 UI 开发目前已经不好学到了，原因是不经常用。 企业开发中，很少人会选择用 Java 开发有 UI 的桌面程序。教程中也很难找到了。
+即使这样，学习一下还是很有必要的，万一需要使用，不至于不会用。
+另一种情况，我们可以通过这个技术衍生出类似技术的 思考能力。或许在以后用其它语言写桌面程序时，已经有了实现思路。
+其实目前有很多桌面程序也是 java 写得，比如 java 开发者基本都熟悉的 JetBrain Idea 以及 JetBrain 的其它产品，它是由 java swing 写的（没错，不是 javafx ）。 再比如 ArcTime ， HMCL 等等。
+作为 “跨平台掌门人” Java ， 跨平台在这方面也是少不了的。 这是这个教程系列的第一篇文章，我会用最通俗的语言，让你学会的。
+文章已在 2021 年 8月12日 补充 “面板”。 第一次发布时间在 2021 年 7 月 3 日。
+1. AWT 与 Swing Java 的 GUI 由各种组件构成，它们在 java.awt 与 javax.swing 包中。
+AWT 组件在 java.</description>
+    </item>
+    
+  </channel>
+</rss>

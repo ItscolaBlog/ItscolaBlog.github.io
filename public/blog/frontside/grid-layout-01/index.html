@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Java and C# developer.">
+    <meta name="Author" content="White_cola">
+    <meta name="keywords" content="白可乐的博客,White_cola Blog,white_cola,white_cola mcbbs,White_Cola,白可乐">
+    <link rel="stylesheet" href=https://itscola.github.io/css/syntax.css>
+    <link rel="stylesheet" href=https://itscola.github.io/css/style.css>
+    <script src="https://kit.fontawesome.com/1b7478c139.js" crossorigin="anonymous"></script>
+    <title>前端 Grid 布局 - 网格布局 （一）- 响应式 元素排列 更强且灵活</title>
+  </head><body><aside id="sidenav">
+    <header>
+    
+        <a href=https://itscola.github.io/><img src="https://itscola.github.io/avatar.png" alt="avatar"></a>
+        
+    
+
+    <a id="branding" href=https://itscola.github.io/>
+        
+            White_cola Blog
+        
+    </a>
+    </header>
+
+    <nav>
+        
+            		
+            <a href="/"
+                
+            >
+                <i class="fas fa-home fa-sm"></i>
+                <span>主页</span>
+            </a>
+        
+            		
+            <a href="/blog/"
+                
+            >
+                <i class="blog"></i>
+                <span>全部文章</span>
+            </a>
+        
+            		
+            <a href="/tags"
+                
+            >
+                <i class="tags"></i>
+                <span>标签</span>
+            </a>
+        
+            		
+            <a href="https://github.com/itscola"
+                
+                    target="_blank"
+                
+            >
+                <i class="fab fa-github fa-ms"></i>
+                <span>github</span>
+            </a>
+        
+            		
+            <a href="/tags/java/"
+                
+            >
+                <i class="java"></i>
+                <span>java</span>
+            </a>
+        
+            		
+            <a href="/index.xml"
+                
+            >
+                <i class="fas fa-rss fa-ms"></i>
+                <span>RSS</span>
+            </a>
+        
+            		
+            <a href="/tags/computersystemframework/"
+                
+            >
+                <i class="ComputerSystemFramework"></i>
+                <span>计算机系统结构</span>
+            </a>
+        
+    </nav>
+</aside>
+<main id="main">
+            <a href="javascript:void(0)" id="closebtn" onclick="navToggle()"><i class="fas fa-bars fa-lg"></i></a>
+            <div class="content">
+
+    
+	
+    <h1 id="title">前端 Grid 布局 - 网格布局 （一）- 响应式 元素排列 更强且灵活</h1>
+    
+      
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一gridlayout">一，GridLayout</a></li>
+    <li><a href="#二grid-外部容器基本操作">二，Grid 外部容器基本操作</a>
+      <ul>
+        <li><a href="#1-定义-grid-布局---display-grid">1. 定义 Grid 布局 - display: grid;</a></li>
+        <li><a href="#2-核心概念-行和列">2. 核心概念 行和列</a></li>
+        <li><a href="#3-行的大小-浮动值-与-百分比响应式">3. 行的大小 浮动值 与 百分比，响应式</a></li>
+        <li><a href="#5-设置行和列之间的间距">5. 设置行和列之间的间距</a></li>
+      </ul>
+    </li>
+    <li><a href="#三grid-布局-元素对齐方式">三，Grid 布局 元素对齐方式</a>
+      <ul>
+        <li><a href="#1-元素横向对齐方式-justify-items">1. 元素横向对齐方式 justify-items</a></li>
+        <li><a href="#2-元素竖向对齐方式-align-items">2. 元素竖向对齐方式 align-items</a></li>
+      </ul>
+    </li>
+    <li><a href="#四grid-布局-网格纵轴和竖轴-在整个外部容器的对齐方式">四，Grid 布局 网格(纵轴和竖轴) 在整个外部容器的对齐方式</a>
+      <ul>
+        <li><a href="#1-容器横向对齐方式-justify-content">1. 容器横向对齐方式 justify-content</a></li>
+        <li><a href="#2-容器竖向对齐方式-align-content">2. 容器竖向对齐方式 align-content</a></li>
+      </ul>
+    </li>
+    <li><a href="#未完待续期待下一章节">未完待续，期待下一章节</a></li>
+  </ul>
+</nav>
+    <hr>
+<h2 id="一gridlayout">一，GridLayout</h2>
+<p>GridLayout 网格布局，实现 复杂元素排列 及 响应式，何必要用 CSS 框架。    <br>
+<img src="/grid/1.png" alt=""></p>
+<h2 id="二grid-外部容器基本操作">二，Grid 外部容器基本操作</h2>
+<h3 id="1-定义-grid-布局---display-grid">1. 定义 Grid 布局 - display: grid;</h3>
+<p>在外层容器 CSS 上加上 display: grid 以开启 Grid 网格布局。<br>
+其内部的元素将变为 Grid 布局的元素。</p>
+<p><img src="/grid/2.png" alt=""></p>
+<h3 id="2-核心概念-行和列">2. 核心概念 行和列</h3>
+<p>Grid 布局会划分多条 水平线 垂直线，交叉来划分出网格，统称为 网格线。</p>
+<p>使用 grid-template-columns 属性，可以指定按照多少列排列，并指定每列中的元素宽度所占大小。
+<img src="/grid/3.png" alt=""></p>
+<p>如图，我们指定了 4 个 100px , 则意味着划分成了 4 列进行排列。每一列元素的宽度占 100px。 <br>
+<img src="/grid/4.png" alt=""></p>
+<p>当然 如果指定 3 个，就意味着分为 3 列。 有几列，看有多少个值。  <br>
+<img src="/grid/19.png" alt=""></p>
+<p>当我们改为 grid-template-columns: 100px 200px 100px 100px; 第二列的元素所占宽度变为 200px。 <br>
+<img src="/grid/5.png" alt=""></p>
+<hr>
+<p>那么，我们也可以通过 grid-template-rows 属性来指定行，我们可以指定多少行，每行占多少大小。</p>
+<p>下面我将加更多div ，去掉 height CSS 属性 (因为要用 grid-template-rows 来指定每行大小了)。  <br>
+并设定为 grid-template-rows: 100px 200px 100px 100px;     <br>
+<img src="/grid/6.png" alt=""></p>
+<p>结果如图 总共 4 行，第二行所占行大小为 200px。
+<img src="/grid/7.png" alt=""></p>
+<h3 id="3-行的大小-浮动值-与-百分比响应式">3. 行的大小 浮动值 与 百分比，响应式</h3>
+<p>现在有一个问题，这样指定行和列，确实很方便，很好用。 但是，最大的问题是 我们需要的是响应式。 <br>
+想做出一个优质的页面，响应式是必不可少的。</p>
+<p>我们之前介绍过 <a href="https://www.whitecola.top/tags/bootstrap/">如何用 bootstrap 实现响应式</a>。而其实，通过 Grid 布局实现响应式更为简单。</p>
+<p>我们只需要设定 grid-template-columns 每列所占大小为浮动大小就可以了。   <br>
+浮动大小为 Grid 布局中的专用单位。 以 fr 结尾。</p>
+<p>grid-template-columns: 1fr 2fr 1fr 1fr;  <br>
+<img src="/grid/8.png" alt=""></p>
+<p>意味着 第一列占总体的 五分之一 第二列占五分之二 第三列 五分之一 第四列五分之一。<br>
+<img src="/grid/9.png" alt=""></p>
+<p>除此之外，我们也可以通过设定百分比，来指定大小，实现响应式。 即所占 总体的大小。 <br>
+<img src="/grid/10.png" alt="">    <br>
+<img src="/grid/11.png" alt="">    <br>
+<img src="/grid/12.png" alt=""></p>
+<p>这些单位之间也可以混合使用。
+grid-template-columns: 10% 2fr 20px 1fr;    <br>
+都可以。</p>
+<h3 id="5-设置行和列之间的间距">5. 设置行和列之间的间距</h3>
+<p>我们可以通过 grid-row-gap 设置每行的间距。 <br>
+<img src="/grid/13.png" alt=""></p>
+<p>也可以通过 grid-column-gap 设置列的间距。
+<img src="/grid/14.png" alt=""></p>
+<h2 id="三grid-布局-元素对齐方式">三，Grid 布局 元素对齐方式</h2>
+<h3 id="1-元素横向对齐方式-justify-items">1. 元素横向对齐方式 justify-items</h3>
+<p>我们可以决定行和列之中的元素如何对齐。它跟 <a href="https://www.whitecola.top/blog/frontside/flex-layout-01/">flex 布局</a> 类似 也有主轴和纵轴。</p>
+<p>首先我们给元素设置固定大小，实现小于网格，这样才能看出效果。 可以看到元素默认在网格的左上角对齐。   <br>
+<img src="/grid/15.png" alt=""></p>
+<p>使用 justify-items 定义横向的对齐方式。 分别有 start ， end ， center ， stretch。 <br>
+即 向开头对齐(左) 向结尾对齐(右) 中间对齐 拉伸占满。</p>
+<p>比如  居中对齐。   <br>
+<img src="/grid/16.png" alt=""></p>
+<h3 id="2-元素竖向对齐方式-align-items">2. 元素竖向对齐方式 align-items</h3>
+<p>使用 align-items 定义横向的对齐方式。 分别有 start ， end ， center ， stretch。 <br>
+即 向开头对齐(上) 向结尾对齐(下) 中间对齐 拉伸占满。</p>
+<p>比如 竖向居中。
+<img src="/grid/17.png" alt=""></p>
+<h2 id="四grid-布局-网格纵轴和竖轴-在整个外部容器的对齐方式">四，Grid 布局 网格(纵轴和竖轴) 在整个外部容器的对齐方式</h2>
+<p>和 三 使用方式差不多，差在 三 针对容器内元素的对齐，这边针对容器的对齐。</p>
+<h3 id="1-容器横向对齐方式-justify-content">1. 容器横向对齐方式 justify-content</h3>
+<p>属性值可以是 start | end | center | stretch | space-between;  第二章节会补充更多。<br>
+即 向开头对齐(左) 向结尾对齐(右) 中间对齐 拉伸占满 内部元素之间间隔相等。</p>
+<p>容器相对于外面容器居中对齐。
+<img src="/grid/18.png" alt=""></p>
+<h3 id="2-容器竖向对齐方式-align-content">2. 容器竖向对齐方式 align-content</h3>
+<p>属性值可以是 start | end | center | stretch | space-between; 第二章节会补充更多。  <br>
+即 向开头对齐(上) 向结尾对齐(下) 中间对齐 拉伸占满 内部元素之间间隔相等。</p>
+<p>和上面类似 不多说。</p>
+<h2 id="未完待续期待下一章节">未完待续，期待下一章节</h2>
+<p>基本操作并不是无所谓，不掌握基本操作就不会有进阶</p>
+
+    
+	
+	
+	
+    <div class="nav-next-prev">
+        <div class="nav-prev">
+            
+                <a href="https://itscola.github.io/blog/frontside/flex-layout-01/"><i class="fas fa-chevron-left"></i></a>
+            
+        </div>
+        <a class="nav-top" href="#">top</i></a>
+        <div class="nav-next">
+            
+                <a class="grayed-out" href="javascript:void()"><i class="fas fa-chevron-right"></i></a>
+            
+        </div>
+    </div>
+    
+
+            </div><footer>
+<div class="footer-content">
+
+  <div class="contact-info">
+      
+      
+  </div>
+
+
+<p class="copyright meta">我们都渴望的安静，促使我们不再安静。
+ Blog Powered by Hugo.</p>
+
+</div>
+</footer></main>
+    </body>
+    <script src=https://itscola.github.io/js/navbutton.js></script>
+</html>
