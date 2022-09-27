@@ -1,2 +1,0 @@
-# ItscolaBlog.github.io
-blog
